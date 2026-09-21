@@ -1,0 +1,844 @@
+# French translations for PACKAGE package.
+# Copyright (C) 2025 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Automatically generated, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-28 21:05+0000\n"
+"PO-Revision-Date: 2025-02-20 14:23+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../src/gconfid/opt_rounding/opt_roundschema.py:20
+msgid ""
+"'CellLB' values must be less than or equal to their respective 'CellUB' "
+"values."
+msgstr ""
+"Les valeurs 'CellLB' doivent être inférieures ou égales à leurs valeurs "
+"'CellUB' respectives."
+
+#: ../../src/gconfid/opt_rounding/opt_roundschema.py:37
+msgid ""
+"'ConstraintLB' values must be less than or equal to their respective "
+"'ConstraintUB' values."
+msgstr ""
+"Les valeurs 'ConstraintLB' doivent être inférieures ou égales à leurs "
+"valeurs 'ConstraintUB' respectives."
+
+#: ../../src/gconfid/opt_rounding/_opt_round.py:55
+msgid ""
+"{} was not present on the input dataset incell, assuming all values are to "
+"be {}"
+msgstr ""
+"{} n'était pas présent dans l'ensemble de données d'entrée incell, en "
+"supposant que toutes les valeurs soient {}."
+
+#: ../../src/gconfid/opt_rounding/_opt_round.py:63
+msgid ""
+"CellUB was not present on the input dataset incell, assuming all values are "
+"to be missing"
+msgstr ""
+"CellUB n'était pas présent dans l'ensemble de données d'entrée incell, en "
+"supposant que toutes les valeurs sont manquantes."
+
+#: ../../src/gconfid/opt_rounding/_opt_round.py:69
+msgid ""
+"CellLB was not present on the input dataset incell, assuming all values are "
+"to be missing"
+msgstr ""
+"CellLB n'était pas présent dans l'ensemble de données d'entrée incell, en "
+"supposant que toutes les valeurs soient {}."
+
+#: ../../src/gconfid/opt_rounding/_opt_round.py:96
+#: ../../src/gconfid/opt_rounding/_opt_round.py:104
+msgid ""
+"{} was not present on the input dataset {}, assuming all values are to be {}"
+msgstr ""
+"{} n'était pas présent dans l'ensemble de données d'entrée {}, en supposant "
+"que toutes les valeurs soient {}."
+
+#: ../../src/gconfid/opt_rounding/_opt_round.py:151
+msgid "Start solving LP..."
+msgstr "Commencez à résoudre LP..."
+
+#: ../../src/gconfid/opt_rounding/_opt_round.py:157
+msgid "Status: {}"
+msgstr "Statut: {}"
+
+#: ../../src/gconfid/opt_rounding/_opt_round.py:183
+msgid "The objective value is: {}"
+msgstr "La valeur objective est : {}"
+
+#: ../../src/gconfid/opt_rounding/_opt_round.py:210
+#: ../../src/gconfid/suppression/_suppress.py:1368
+msgid "Total duration: {}"
+msgstr "Durée totale : {}"
+
+#: ../../src/gconfid/__init__.py:60
+msgid "Importing gconfid package version {}"
+msgstr "Importation de la version du paquet gconfid {}"
+
+#: ../../src/gconfid/__init__.py:61
+msgid "G-Confid package imported"
+msgstr "Paquet G-Confid importé"
+
+#: ../../src/gconfid/__init__.py:69
+msgid "Default solver set to {}"
+msgstr "Le solveur par défaut est défini sur {}"
+
+#: ../../src/gconfid/__init__.py:71
+msgid ""
+"highspy library is not installed. Pulp's default solver will be left as {}."
+msgstr ""
+"La bibliothèque 'highspy' n'est pas installée. Le solveur par défaut de Pulp "
+"restera {}."
+
+#: ../../src/gconfid/__init__.py:117
+msgid "G-Confid Version                : {}\n"
+msgstr "Version G-Confid                : {}\n"
+
+#: ../../src/gconfid/__init__.py:118
+msgid "Support Email                   : {}\n"
+msgstr "Courriel de soutien             : {}\n"
+
+#: ../../src/gconfid/__init__.py:119
+msgid "Start Time                      : {} ({})\n"
+msgstr "Heure de début                  : {} ({})\n"
+
+#: ../../src/gconfid/__init__.py:134
+msgid "G-Confid {} completed: {} ({})\n"
+msgstr "G-Confid {} terminé  : {} ({})\n"
+
+#: ../../src/gconfid/proc/proc_sensitiv.py:377
+msgid "Option `{}` has been renamed to `{}`"
+msgstr "L'option `{}` a été renommée en `{}`"
+
+#: ../../src/gconfid/proc/gconfid_proc.py:145
+#: ../../src/gconfid/proc/gconfid_proc.py:150
+msgid "Option `{}` is deprecated, use `{}` instead"
+msgstr "L'option `{}` est désuète, utilisez `{}` à la place"
+
+#: ../../src/gconfid/proc/gconfid_proc.py:200
+#: ../../src/gconfid/util/_confidmodule.py:210
+msgid "Validation for {} was successful!"
+msgstr "La validation de {} a été effectuée avec succès!"
+
+#: ../../src/gconfid/proc/gconfid_proc.py:207
+msgid "{} failed validation check."
+msgstr "Le contrôle de validation de {} a échoué."
+
+#: ../../src/gconfid/nls/__init__.py:14
+msgid ""
+"TEST MESSAGE for Native Language Support: Forest, naive, French, Creme Brulee"
+msgstr ""
+"MESSAGE DE TEST pour la prise en charge de la langue maternelle : forêt, "
+"naïf, français, crème brûlée"
+
+#: ../../src/gconfid/auditing/_audit.py:67
+msgid "lb_factor .......................=   {}"
+msgstr "facteur de limite inférieure ....= {}"
+
+#: ../../src/gconfid/auditing/_audit.py:68
+msgid "ub_factor .......................=   {}"
+msgstr "facteur de limite supérieure ....= {}"
+
+#: ../../src/gconfid/auditing/_audit.py:69
+msgid "report_level ....................=   {}"
+msgstr "niveau du rapport .................= {}"
+
+#: ../../src/gconfid/auditing/_audit.py:72
+msgid "by ...............................=   {}"
+msgstr "par ..............................= {}"
+
+#: ../../src/gconfid/auditing/_audit.py:87
+#: ../../src/gconfid/suppression/_suppress.py:1278
+msgid "Processing by Group: '{}'"
+msgstr "Traitement par groupe : '{}'"
+
+#: ../../src/gconfid/auditing/_audit.py:111
+#: ../../src/gconfid/auditing/_audit.py:987
+#: ../../src/gconfid/suppression/_suppress.py:1320
+msgid "Duration: {}"
+msgstr "Durée: {}"
+
+#: ../../src/gconfid/auditing/_audit.py:137
+msgid "All information is suppressed, no validation is required."
+msgstr ""
+"Toutes les informations sont supprimées, aucune validation n'est requise."
+
+#: ../../src/gconfid/auditing/_audit.py:139
+msgid "All information is publishable, no validation is required."
+msgstr ""
+"Toutes les informations sont publiables, aucune validation n'est requise."
+
+#: ../../src/gconfid/auditing/_audit.py:246
+msgid "Sub-process completed - printing logs:"
+msgstr "Sous-processus terminé - impression des enregistreurs:"
+
+#: ../../src/gconfid/auditing/_audit.py:527
+msgid "Left to solve"
+msgstr "Reste à résoudre"
+
+#: ../../src/gconfid/auditing/_audit.py:528
+msgid "Remaining"
+msgstr "à résoudre"
+
+#: ../../src/gconfid/auditing/_audit.py:534
+msgid "Solving for max and min values of binary sets:"
+msgstr "Détermination des valeurs maximales et minimales d'ensembles binaires:"
+
+#: ../../src/gconfid/auditing/_audit.py:540
+msgid "Solving for max and min values of cells not part of a binary set:"
+msgstr ""
+"Calcul des valeurs maximales et minimales des cellules n'appartenant pas à "
+"un ensemble binaire :"
+
+#: ../../src/gconfid/auditing/_audit.py:553
+msgid ""
+"Solving cell {:<7}  |  {:^{width2}}  |  {:^{width3}}  |  Solve duration: "
+"{:>10}"
+msgstr ""
+"Résolution de la cellule {:<7}  |  {:^{width2}}  |  {:^{width3}}  |  Durée "
+"de la résolution: {:>10}"
+
+#: ../../src/gconfid/auditing/_audit.py:555
+msgid "{} / {} {}"
+msgstr "{} / {} {}"
+
+#: ../../src/gconfid/auditing/_audit.py:556
+msgid "{:>5.2f}% {}"
+msgstr "{:>5.2f}% {}"
+
+#: ../../src/gconfid/auditing/_audit.py:604
+msgid "Solving complete."
+msgstr "Résolution complète"
+
+#: ../../src/gconfid/auditing/_audit.py:606
+msgid "Solving complete in sub-process."
+msgstr "Résolution complète dans le sous-processus"
+
+#: ../../src/gconfid/auditing/_audit.py:774
+msgid "Summary Report"
+msgstr "Rapport sommaire"
+
+#: ../../src/gconfid/auditing/_audit.py:779
+msgid "Good protection"
+msgstr "Bonne protection"
+
+#: ../../src/gconfid/auditing/_audit.py:780
+msgid "Protection not achieved"
+msgstr "Protection partielle"
+
+#: ../../src/gconfid/auditing/_audit.py:781
+msgid "Exact disclosure"
+msgstr "Divulgation exacte"
+
+#: ../../src/gconfid/auditing/_audit.py:782
+#: ../../src/gconfid/auditing/_audit.py:823
+msgid "Total"
+msgstr "Total"
+
+#: ../../src/gconfid/auditing/_audit.py:784
+msgid "Number of sensitive cells"
+msgstr "Cellules sensibles supprimées"
+
+#: ../../src/gconfid/auditing/_audit.py:791
+msgid "Number of complements"
+msgstr "Nombre de compléments"
+
+#: ../../src/gconfid/auditing/_audit.py:798
+msgid "Number of user suppressed cells (used as complements)"
+msgstr ""
+"Nombre de cellules supprimées par l'usager (qui sont des compléments)"
+
+#: ../../src/gconfid/auditing/_audit.py:805
+msgid "Number of user suppressed cells (not used as complements)"
+msgstr ""
+"Nombre de cellules supprimées par l'usager "
+"(qui ne sont pas des compléments)"
+
+#: ../../src/gconfid/auditing/_audit.py:812
+msgid "Number of sensitive aggregates"
+msgstr "Nombre d'agrégats sensibles"
+
+#: ../../src/gconfid/auditing/_audit.py:857
+msgid "Calculating bounds with Shuttle"
+msgstr "Calcul des bornes avec Shuttle"
+
+#: ../../src/gconfid/auditing/_audit.py:860
+msgid "Start time: {}"
+msgstr "L'heure de début: {}"
+
+#: ../../src/gconfid/auditing/_audit.py:882
+msgid "Iteration  Cells with Changed Bounds"
+msgstr "Cellules d'itération avec limites modifiées"
+
+#: ../../src/gconfid/auditing/_audit.py:883
+msgid "=========  ========================="
+msgstr "=========  ========================="
+
+#: ../../src/gconfid/auditing/_audit.py:972
+msgid "   {}                  {}"
+msgstr "   {}                  {}"
+
+#: ../../src/gconfid/auditing/_audit.py:983
+msgid "The Shuttle algorithm has completed"
+msgstr "L'algorithme de Shuttle est terminé"
+
+#: ../../src/gconfid/auditing/_audit.py:1116
+msgid "Computation of Binary Cells completed in: {}"
+msgstr "Le calcul des cellules binaires s'est achevé en: {}"
+
+#: ../../src/gconfid/auditing/_audit.py:1117
+msgid "Number of binary constraints: {}"
+msgstr "Nombre de contraintes binaires: {}"
+
+#: ../../src/gconfid/auditing/_audit.py:1118
+msgid "Number of binary cells: {}"
+msgstr "Nombre de cellules binaires: {}"
+
+#: ../../src/gconfid/auditing/_audit.py:1119
+msgid "Number of binary sets: {}"
+msgstr "Nombre d'ensembles binaires: {}"
+
+#: ../../src/gconfid/auditing/auditschema.py:16
+msgid "'OutStatus' field must be one of ['P','X']."
+msgstr "La valeur de 'OutStatus' doit être l'un des suivants: ['P','X']"
+
+#: ../../src/gconfid/suppression/suppressschema.py:19
+msgid ""
+"Some cells have a status of 'V' or 'X' and have a positive sensitivity. "
+"Those cells will be treated as sensitive."
+msgstr ""
+"Des cellules ont un status 'V' ou 'X' et une sensibilité positive. Ces "
+"cellules seront traitées comme sensible."
+
+#: ../../src/gconfid/suppression/suppressschema.py:26
+msgid ""
+"Some cells have a status of 'S' and have a non positive sensitivity. Those "
+"cells will be treated as non-sensitive."
+msgstr ""
+"Des cellules ont un status 'S' et une sensibilité non positive. Ces cellules "
+"seront traitées comme non sensible."
+
+#: ../../src/gconfid/suppression/suppressschema.py:34
+msgid ""
+"Sensitivity is greater than TotalNoise, will be considered equal to "
+"TotalNoise."
+msgstr ""
+"Avertissement : la valeur de sensibilité est supérieure au total de la "
+"cellule. La sensibilité sera définie sur le total de la cellule."
+
+#: ../../src/gconfid/suppression/suppressschema.py:41
+msgid "'Status' is 'P' for a sensitive cell."
+msgstr "La valeur de 'Status' est 'P' pour une cellule sensible"
+
+#: ../../src/gconfid/suppression/suppressschema.py:47
+msgid "'Status' field must be one of ['P','S','X','V']."
+msgstr "La valeur de 'Status' doit être l'un des suivants: ['P','S','X','V']"
+
+#: ../../src/gconfid/suppression/suppressschema.py:53
+msgid "'Type' field must be one of ['C','A']."
+msgstr "La valeur de 'Type' doit être l'un des suivants: ['C','A']"
+
+#: ../../src/gconfid/suppression/suppressschema.py:89
+msgid ""
+"Negative or missing value for cost variable {} detected in the input cells "
+"data set."
+msgstr ""
+"Valeur de la variable de coût {} négative ou manquante détectée dans "
+"l'ensemble de données d'entrée des cellules."
+
+#: ../../src/gconfid/suppression/suppressschema.py:97
+msgid "Missing or invalid Coefficient values"
+msgstr "Valeurs de coefficient manquantes ou invalides"
+
+#: ../../src/gconfid/suppression/suppressschema.py:107
+msgid ""
+"A constraint must have at least one coefficient equal to 1. ConstraintId = {}"
+msgstr ""
+"Une contrainte doit avoir au moins un coefficient égal à 1. ConstraintId = {}"
+
+#: ../../src/gconfid/suppression/suppressschema.py:110
+msgid ""
+"A constraint has no -1 coefficient. Exactly one such coefficient is "
+"expected. ConstraintId = {}"
+msgstr ""
+"Une contrainte n'a pas de coefficient -1. Un seul coefficient de ce type est "
+"attendu. ConstraintId = {}"
+
+#: ../../src/gconfid/suppression/suppressschema.py:113
+msgid ""
+"A constraint has more than one -1 coefficient. Exactly one such coefficient "
+"is expected. ConstraintId = {}"
+msgstr ""
+"Une contrainte n'a aucun coefficient égal à -1. Il en faut exactement un. "
+"ConstraintId = {}"
+
+#: ../../src/gconfid/suppression/_suppress.py:274
+msgid "Error in Cost function"
+msgstr "Erreur dans la fonction de coût"
+
+#: ../../src/gconfid/suppression/_suppress.py:443
+msgid ""
+"Sensitivity value indicates sensitive but status is 'V' or 'X'. Status has "
+"been set to 'S'. CellId = {}"
+msgstr ""
+"La valeur de sensibilité indique qu'il s'agit d'une sensibilité, mais l'état "
+"est 'V' ou 'X'. Le statut a été défini sur 'S'. CellId = {}"
+
+#: ../../src/gconfid/suppression/_suppress.py:447
+msgid ""
+"Sensitivity value indicates non-sensitive but status is 'S'. Status has been "
+"set to 'V'. CellId = {}"
+msgstr ""
+"La valeur de sensibilité indique qu'il n'y a pas de sensibilité, mais le "
+"statut est 'S'. Le statut a été défini sur 'V'. CellId = {}"
+
+#: ../../src/gconfid/suppression/_suppress.py:451
+msgid ""
+"Sensitivity value is greater than the cell total. Sensitivity has been set "
+"to cell total. CellId = {}"
+msgstr ""
+"La valeur de sensibilité est supérieure au total de la cellule. La "
+"sensibilité sera définie sur le total de la cellule. CellId = {}"
+
+#: ../../src/gconfid/suppression/_suppress.py:488
+msgid ""
+"\n"
+"Phase 1 Time:                             {}\n"
+msgstr ""
+"\n"
+"Durée de la phase 1:                      {}\n"
+
+#: ../../src/gconfid/suppression/_suppress.py:519
+msgid ""
+"\n"
+"Phase 2 Time:                             {}\n"
+msgstr ""
+"\n"
+"Phase 2 Durée:                            {}\n"
+
+#: ../../src/gconfid/suppression/_suppress.py:627
+msgid "Phase {:<9} CurrentCell: {:<9}"
+msgstr "Phase {:<9} CurrentCell: {:<9}"
+
+#: ../../src/gconfid/suppression/_suppress.py:635
+msgid ""
+"Error occurred in solving the LP: Non-Optimal status returned by solver for "
+"cell {}."
+msgstr ""
+"Une erreur s'est produite lors de la résolution du problème linéaire: Statut "
+"non optimal renvoyé par le solveur pour la cellule {}."
+
+#: ../../src/gconfid/suppression/_suppress.py:639
+#: ../../src/gconfid/suppression/_suppress.py:724
+msgid "Current cell lower bound {}"
+msgstr "Limite inférieure de la cellule actuelle {}"
+
+#: ../../src/gconfid/suppression/_suppress.py:640
+#: ../../src/gconfid/suppression/_suppress.py:725
+msgid "x value {}"
+msgstr "valeur x {}"
+
+#: ../../src/gconfid/suppression/_suppress.py:641
+#: ../../src/gconfid/suppression/_suppress.py:726
+msgid "y value {}"
+msgstr "valeur y {}"
+
+#: ../../src/gconfid/suppression/_suppress.py:642
+#: ../../src/gconfid/suppression/_suppress.py:727
+msgid "Current cell ABS x minus y: {}"
+msgstr "Cellule actuelle ABS x moins y : {}"
+
+#: ../../src/gconfid/suppression/_suppress.py:677
+msgid "Selecting the cell with the highest ambiguity value failed."
+msgstr ""
+"La sélection de la cellule ayant la valeur d'ambiguïté la plus élevée a "
+"échoué."
+
+#: ../../src/gconfid/suppression/_suppress.py:692
+msgid "Phase {:<9} iteration: {:<9} CurrentCell: {:<9} cells_to_treat: {:<9}"
+msgstr ""
+"Itération de phase {:<9}: {:<9} CurrentCell: {:<9} cells_to_treat: {:<9}"
+
+#: ../../src/gconfid/suppression/_suppress.py:708
+msgid ""
+"Error occurred in solving the LP: Optimal status was returned but "
+"cells_to_treat count was unchanged from last iteration."
+msgstr ""
+"Une erreur s'est produite lors de la résolution du LP : le statut optimal a "
+"été renvoyé, mais le nombre de cells_to_treat est resté inchangé par rapport "
+"à la dernière itération."
+
+#: ../../src/gconfid/suppression/_suppress.py:720
+msgid ""
+"Error occurred in solving the LP: Non-Optimal status returned by solver."
+msgstr ""
+"Une erreur s'est produite lors de la résolution du problème linéaire: Statut "
+"non optimal renvoyé par le solveur."
+
+#: ../../src/gconfid/suppression/_suppress.py:728
+msgid "Current cell net variation {}"
+msgstr "Variation actuelle du réseau cellulaire {}"
+
+#: ../../src/gconfid/suppression/_suppress.py:729
+msgid "Current cell ambiguity {}"
+msgstr "Ambiguïté de la cellule actuelle {}"
+
+#: ../../src/gconfid/suppression/_suppress.py:746
+msgid ""
+"The suppress_order {} used was not able to find the next cell to protect."
+msgstr ""
+"Le suppress_order {} utilisé n'a pas été en mesure de trouver la cellule "
+"suivante à protéger."
+
+#: ../../src/gconfid/suppression/_suppress.py:833
+msgid ""
+"Non-optimal result returned by solver. Returning partially suppressed data..."
+msgstr ""
+"Résultat non optimal renvoyé par le solveur. Renvoi de données partiellement "
+"masquées..."
+
+#: ../../src/gconfid/suppression/_suppress.py:938
+msgid "The provided cost function is not valid: {}"
+msgstr "La fonction de coût fournie n'est pas valide : {}"
+
+#: ../../src/gconfid/suppression/_suppress.py:969
+msgid ""
+"The input cells data set contains only sensitive cells. No suppression will "
+"be performed."
+msgstr ""
+"L'ensemble de données des cellules d'entrée ne contient que des cellules "
+"sensibles. Aucune suppression ne sera effectuée."
+
+#: ../../src/gconfid/suppression/_suppress.py:981
+msgid ""
+"The input cells data set does not contain any sensitive cells. No "
+"suppression will be performed."
+msgstr ""
+"L'ensemble de données d'entrée ne contient que des cellules sensibles. "
+"Aucune suppression ne sera effectuée."
+
+#: ../../src/gconfid/suppression/_suppress.py:993
+msgid ""
+"The input cells data set contains only sensitive, suppressed or published "
+"cells. No further suppression will be performed."
+msgstr ""
+"L'ensemble de données d'entrée ne contient que des cellules sensibles, "
+"supprimées ou publiées. Aucune suppression ne sera effectuée."
+
+#: ../../src/gconfid/suppression/_suppress.py:1022
+msgid ""
+"Some cells are present in the input cells data set but not in the input "
+"constraints data set: \n"
+"{}"
+msgstr ""
+"Certaines cellules sont présentes dans l'ensemble de données des cellules "
+"d'entrée mais pas dans l'ensemble de données des contraintes d'entrée: \n"
+"{}"
+
+#: ../../src/gconfid/suppression/_suppress.py:1031
+msgid ""
+"Some cells are present in the input constraints data set but not in the "
+"input cells data set: \n"
+"{}"
+msgstr ""
+"Certaines cellules sont présentes dans l'ensemble de données des contraintes "
+"d'entrée mais pas dans l'ensemble de données des cellules d'entrée: \n"
+"{}"
+
+#: ../../src/gconfid/suppression/_suppress.py:1066
+msgid ""
+"A unique sensitive cell detected in a row or column with all other cells "
+"forced to be published: ConstraintId = {}, CellId = {}"
+msgstr ""
+"Une cellule sensible unique détectée dans une rangée ou colonne avec toutes "
+"les autres cellules forcées à être publiées: ConstraintId = {}, CellId = {}"
+
+#: ../../src/gconfid/suppression/_suppress.py:1148
+msgid "Summary of the entire suppression process:"
+msgstr "Sommaire du processus entier de suppression"
+
+#: ../../src/gconfid/suppression/_suppress.py:1150
+msgid "Summary of the suppression process phase 1:"
+msgstr "Sommaire du processus de suppression phase 1"
+
+#: ../../src/gconfid/suppression/_suppress.py:1152
+msgid "Summary of the suppression process phase 2:"
+msgstr "Sommaire du processus de suppression phase 2"
+
+#: ../../src/gconfid/suppression/_suppress.py:1154
+msgid "Summary of the entire suppression process (after phase 2):"
+msgstr "Sommaire du processus entier de suppression (après la phase 2)"
+
+#: ../../src/gconfid/suppression/_suppress.py:1160
+msgid "Number"
+msgstr "Nombre"
+
+#: ../../src/gconfid/suppression/_suppress.py:1160
+msgid "Value"
+msgstr "Valeur"
+
+#: ../../src/gconfid/suppression/_suppress.py:1161
+msgid "Percent of total number of cells\n"
+msgstr "Pourcentage du nombre total de cellules\n"
+
+#: ../../src/gconfid/suppression/_suppress.py:1164
+msgid "All suppressed cells"
+msgstr "Toutes les cellules supprimées"
+
+#: ../../src/gconfid/suppression/_suppress.py:1165
+msgid "Suppressed sensitive cells"
+msgstr "Cellules sensibles supprimées"
+
+#: ../../src/gconfid/suppression/_suppress.py:1166
+msgid "Suppressed complements"
+msgstr "Compléments supprimés"
+
+#: ../../src/gconfid/suppression/_suppress.py:1167
+msgid "Cells suppressed by user"
+msgstr "Cellules supprimées par l'usager"
+
+#: ../../src/gconfid/suppression/_suppress.py:1169
+msgid "Suppressed aggregates"
+msgstr "Aggrégats supprimés"
+
+#: ../../src/gconfid/suppression/_suppress.py:1170
+msgid "Published cells"
+msgstr "Cellules publiées"
+
+#: ../../src/gconfid/suppression/_suppress.py:1300
+msgid "Error occurred during solver execution for by_group: '{}'."
+msgstr ""
+"Une erreur s'est produite lors de l'exécution du solveur pour by_group : "
+"'{}'."
+
+#: ../../src/gconfid/suppression/_suppress.py:1318
+msgid "Number of cell suppressed in by group: {}"
+msgstr "Nombre de cellules supprimées par groupe : {}"
+
+#: ../../src/gconfid/suppression/_suppress.py:1319
+msgid "Value amount suppressed in by group: {}"
+msgstr "Montant de la valeur supprimé par groupe : {}"
+
+#: ../../src/gconfid/suppression/_suppress.py:1343
+msgid "Error occurred during solver execution."
+msgstr "Une erreur s'est produite pendant l'exécution du solveur."
+
+#: ../../src/gconfid/suppression/_suppress.py:1366
+msgid "Total number of cell suppressed: {}"
+msgstr "Nombre total de cellules supprimées : {}"
+
+#: ../../src/gconfid/suppression/_suppress.py:1367
+msgid "Total value amount suppressed: {}"
+msgstr "Montant total supprimé : {}"
+
+#: ../../src/gconfid/util/solver_utils.py:106
+#: ../../src/gconfid/util/solver_utils.py:112
+#: ../../src/gconfid/util/solver_utils.py:116
+msgid "Solver threads set to {}"
+msgstr "Nombre de threads du solveur défini sur {}"
+
+#: ../../src/gconfid/util/solver_utils.py:141
+msgid ""
+"Error while combining solver log files: sub-process log directory {} does "
+"not exist"
+msgstr ""
+"Erreur lors de la fusion des fichiers journaux du solveur: le répertoire de "
+"journaux du sous-processus {} n'existe pas"
+
+#: ../../src/gconfid/util/_confidmodule.py:57
+msgid "Logging initialized using specified logger: '{}'"
+msgstr "Journalisation initialisée à l'aide du journal spécifié : '{}'"
+
+#: ../../src/gconfid/util/_confidmodule.py:67
+msgid "Logging initialized with default parent: '{}'"
+msgstr "Journalisation initialisée avec le parent par défaut: '{}'"
+
+#: ../../src/gconfid/util/_confidmodule.py:80
+msgid "LpSolverDefault updated to custom_solver {}"
+msgstr "LpSolverDefault défini sur custom_solver {}"
+
+#: ../../src/gconfid/util/_confidmodule.py:112
+msgid "Loading input datasets"
+msgstr "Chargement des ensembles de données d'entrée"
+
+#: ../../src/gconfid/util/_confidmodule.py:113
+msgid "TOTAL load input"
+msgstr "Entrée de charge TOTALE"
+
+#: ../../src/gconfid/util/_confidmodule.py:118
+msgid "Pre Execute"
+msgstr "Préexécution"
+
+#: ../../src/gconfid/util/_confidmodule.py:119
+msgid "TOTAL pre execute"
+msgstr "TOTAL préexécution"
+
+#: ../../src/gconfid/util/_confidmodule.py:123
+msgid "Execute"
+msgstr "Exécution"
+
+#: ../../src/gconfid/util/_confidmodule.py:124
+msgid "TOTAL execute"
+msgstr "TOTAL exécution"
+
+#: ../../src/gconfid/util/_confidmodule.py:128
+msgid "Post Execute"
+msgstr "Post Exécution"
+
+#: ../../src/gconfid/util/_confidmodule.py:129
+msgid "TOTAL post execute"
+msgstr "TOTAL après exécution"
+
+#: ../../src/gconfid/util/_confidmodule.py:133
+msgid "Free input datasets"
+msgstr "Libérer les ensembles de données d'entrée"
+
+#: ../../src/gconfid/util/_confidmodule.py:134
+msgid "TOTAL free input"
+msgstr "Entrée totale libérée"
+
+#: ../../src/gconfid/util/_confidmodule.py:139
+msgid "Write output datasets"
+msgstr "Écrire des ensembles de données de sortie"
+
+#: ../../src/gconfid/util/_confidmodule.py:140
+msgid "TOTAL write output"
+msgstr "Sortie d'écriture TOTALE"
+
+#: ../../src/gconfid/util/_confidmodule.py:157
+msgid "Subclass {} must define `{}` class attribute"
+msgstr "La sous-classe {} doit définir l'attribut de classe `{}`"
+
+#: ../../src/gconfid/util/_confidmodule.py:178
+#: ../../src/gconfid/util/_confidmodule.py:191
+msgid "'{}' dataset cannot be modified"
+msgstr "L'ensemble de données '{}' ne peut pas être modifié"
+
+#: ../../src/gconfid/util/_confidmodule.py:213
+msgid "During validation of {} the following warnings occured:"
+msgstr ""
+"Lors de la validation de {}, les avertissements suivants se sont produits:"
+
+#: ../../src/gconfid/util/_confidmodule.py:223
+msgid "{} failed validation. "
+msgstr "La validation de {} a échoué."
+
+#: ../../src/gconfid/util/validation/gconfidvalidator.py:77
+msgid "Field '{}' could not be coerced to type {}"
+msgstr "Le champ '{}' n'a pas pu être contraint au type {}"
+
+#: ../../src/gconfid/util/validation/gconfidvalidator.py:78
+msgid "Field '{}' was found on the input file but not expected."
+msgstr ""
+"Le champ '{}' a été trouvé dans le fichier d'entrée mais n'était pas attendu."
+
+#: ../../src/gconfid/util/validation/gconfidvalidator.py:80
+msgid ""
+"Multiple fields with the label(s) {} were found but should only appear once."
+msgstr ""
+"Plusieurs champs portant le(s) libellé(s) {} ont été trouvés mais ne "
+"devraient apparaître qu'une seule fois."
+
+#: ../../src/gconfid/util/validation/gconfidvalidator.py:81
+msgid "Field '{}' was not found in the data set."
+msgstr "Le champ '{}' n'a pas été trouvé dans l'ensemble de données."
+
+#: ../../src/gconfid/util/validation/gconfidvalidator.py:83
+#: ../../src/gconfid/util/validation/gconfidvalidator.py:84
+msgid "Field '{}' failed check: {}"
+msgstr "Le champ '{}' n'a pas été trouvé dans l'ensemble de données."
+
+#: ../../src/gconfid/util/validation/gconfidvalidator.py:88
+msgid "Fields {} form a composite key and are therefore required to be unique."
+msgstr "Les champs {} forment une clé composite et doivent donc être uniques."
+
+#: ../../src/gconfid/util/validation/gconfidvalidator.py:89
+msgid "Field or index expected to have name '{}', found '{}' instead."
+msgstr ""
+"Le champ ou l'index devrait avoir le nom '{}', il a trouvé '{}' à la place."
+
+#: ../../src/gconfid/util/validation/gconfidvalidator.py:90
+msgid "Field '{}' does not allow null values."
+msgstr "Le champ '{}' n'autorise pas les valeurs nulles."
+
+#: ../../src/gconfid/util/validation/gconfidvalidator.py:91
+msgid "Field '{}' should be unique but contains duplicate values."
+msgstr ""
+"Le champ '{}' devrait être unique, mais il contient des valeurs en double."
+
+#: ../../src/gconfid/util/validation/gconfidvalidator.py:92
+msgid "Field '{}' expected type {} but instead got {}."
+msgstr "Le champ '{}' devait être de type {} mais a été remplacé par {}."
+
+#: ../../src/gconfid/util/validation/gconfidvalidator.py:128
+msgid "DataFrame failed check: {}"
+msgstr "La vérification du DataFrame a échoué: {}"
+
+#: ../../src/gconfid/util/validation/gconfidvalidator.py:135
+msgid "Unexpected issue found during input validation:"
+msgstr "Problème inattendu détecté lors de la validation des entrées:"
+
+#: ../../src/gconfid/util/validation/validationcontext.py:55
+msgid ""
+"Validation can only be performed on input datasets of type pandas.DataFrame."
+msgstr ""
+"La validation ne peut être effectuée que sur des ensembles de données "
+"d'entrée de type pandas.DataFrame."
+
+#: ../../src/gconfid/util/validation/validationcontext.py:69
+msgid ""
+"Normalization can only be performed on input datasets of type "
+"pandas.DataFrame."
+msgstr ""
+"La normalisation ne peut être effectuée que sur des ensembles de données "
+"d'entrée de type pandas.DataFrame."
+
+#: ../../src/gconfid/util/validation/inputmodels.py:21
+msgid "CellId must be a positive integer or able to be coerced to one."
+msgstr ""
+"CellId doit être un nombre entier positif ou pouvoir être contraint à un."
+
+#: ../../src/gconfid/util/validation/inputmodels.py:78
+msgid "Invalid value for 'ConstraintId' (expecting a positive integer)."
+msgstr ""
+"Valeur invalide détectée pour ConstraintId (doit être un entier positif)"
+
+#~ msgid "Number of sensitive cell in good protection: {}"
+#~ msgstr "Nombre de cellules sensibles en bonne protection: {}"
+
+#~ msgid "Number of sensitive cell in protection not achieved: {}"
+#~ msgstr "Nombre de cellules sensibles en protection non atteinte: {}"
+
+#~ msgid "Number of sensitive cell in exact disclosure: {}"
+#~ msgstr "Nombre de cellules sensibles en divulgation exacte: {}"
+
+#~ msgid "Number of complement cell good protection: {}"
+#~ msgstr ""
+#~ "Nombre de cellules du complément bénéficiant d'une bonne protection : {}"
+
+#~ msgid "Number of complement cell protection not achieved: {}"
+#~ msgstr "Nombre de cellules de protection du complément non atteintes: {}"
+
+#~ msgid "Number of complement cell exact disclosure: {}"
+#~ msgstr "Nombre de cellules du complément divulguées avec précision: {}"
+
+#~ msgid "Number of sensitive aggregate cell in good protection: {}"
+#~ msgstr "Nombre de cellules d'agrégats sensibles en bonne protection: {}"
+
+#~ msgid "Number of sensitive aggregate cell in protection not achieved: {}"
+#~ msgstr ""
+#~ "Nombre de cellules agrégées sensibles en protection non atteinte: {}"
+
+#~ msgid "Solving for cell {}"
+#~ msgstr "Résoudre pour la cellule {}"

@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GConfidProcedures", "GConfidProcedures", "{F9E0716F-E789-421E-A7D4-3B33E80303B1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sensitivity", "procedures\sensitivity\sensitivity.vcxproj", "{B255EC70-E71B-4B8A-9B61-3208051608FE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9955AC03-6181-4015-BF99-DD9E2A4F0F46} = {9955AC03-6181-4015-BF99-DD9E2A4F0F46}
+		{3633852A-8E94-40C3-8274-9F8E90622C3A} = {3633852A-8E94-40C3-8274-9F8E90622C3A}
+		{D0E7156F-14A8-4CC1-BB5A-D9394F346BF9} = {D0E7156F-14A8-4CC1-BB5A-D9394F346BF9}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{1953BF7E-FA12-4AF4-867B-545D8922A38F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GConfidAPI", "libraries\GConfidAPI\GConfidAPI.vcxproj", "{3633852A-8E94-40C3-8274-9F8E90622C3A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9955AC03-6181-4015-BF99-DD9E2A4F0F46} = {9955AC03-6181-4015-BF99-DD9E2A4F0F46}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommonAPI", "libraries\CommonAPI\CommonAPI.vcxproj", "{D0E7156F-14A8-4CC1-BB5A-D9394F346BF9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GConfidHeaderFiles", "GConfidHeaderFiles", "{A60AA3ED-0372-4EF0-8599-48910BE94876}"
+	ProjectSection(SolutionItems) = preProject
+		procedures\GConfidHeaderFiles\GConfidIdentifiers.h = procedures\GConfidHeaderFiles\GConfidIdentifiers.h
+		procedures\GConfidHeaderFiles\MessageGConfid.h = procedures\GConfidHeaderFiles\MessageGConfid.h
+		procedures\GConfidHeaderFiles\MessageGConfid_en.h = procedures\GConfidHeaderFiles\MessageGConfid_en.h
+		procedures\GConfidHeaderFiles\MessageGConfid_fr.h = procedures\GConfidHeaderFiles\MessageGConfid_fr.h
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IOUtilities", "libraries\IOUtilities\IOUtilities.vcxproj", "{9955AC03-6181-4015-BF99-DD9E2A4F0F46}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "proc_common", "proc_common", "{213B0311-B55B-45C5-99E3-18CE386178E1}"
+	ProjectSection(SolutionItems) = preProject
+		procedures\proc_common\proc_common.c = procedures\proc_common\proc_common.c
+		procedures\proc_common\proc_common.h = procedures\proc_common\proc_common.h
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		debug_en|x64 = debug_en|x64
+		release_en|x64 = release_en|x64
+		release_fr|x64 = release_fr|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B255EC70-E71B-4B8A-9B61-3208051608FE}.debug_en|x64.ActiveCfg = debug_en|x64
+		{B255EC70-E71B-4B8A-9B61-3208051608FE}.debug_en|x64.Build.0 = debug_en|x64
+		{B255EC70-E71B-4B8A-9B61-3208051608FE}.release_en|x64.ActiveCfg = release_en|x64
+		{B255EC70-E71B-4B8A-9B61-3208051608FE}.release_en|x64.Build.0 = release_en|x64
+		{B255EC70-E71B-4B8A-9B61-3208051608FE}.release_fr|x64.ActiveCfg = release_fr|x64
+		{B255EC70-E71B-4B8A-9B61-3208051608FE}.release_fr|x64.Build.0 = release_fr|x64
+		{3633852A-8E94-40C3-8274-9F8E90622C3A}.debug_en|x64.ActiveCfg = debug_en|x64
+		{3633852A-8E94-40C3-8274-9F8E90622C3A}.debug_en|x64.Build.0 = debug_en|x64
+		{3633852A-8E94-40C3-8274-9F8E90622C3A}.release_en|x64.ActiveCfg = release_en|x64
+		{3633852A-8E94-40C3-8274-9F8E90622C3A}.release_en|x64.Build.0 = release_en|x64
+		{3633852A-8E94-40C3-8274-9F8E90622C3A}.release_fr|x64.ActiveCfg = release_fr|x64
+		{3633852A-8E94-40C3-8274-9F8E90622C3A}.release_fr|x64.Build.0 = release_fr|x64
+		{D0E7156F-14A8-4CC1-BB5A-D9394F346BF9}.debug_en|x64.ActiveCfg = Debug|x64
+		{D0E7156F-14A8-4CC1-BB5A-D9394F346BF9}.debug_en|x64.Build.0 = Debug|x64
+		{D0E7156F-14A8-4CC1-BB5A-D9394F346BF9}.release_en|x64.ActiveCfg = STCE|x64
+		{D0E7156F-14A8-4CC1-BB5A-D9394F346BF9}.release_en|x64.Build.0 = STCE|x64
+		{D0E7156F-14A8-4CC1-BB5A-D9394F346BF9}.release_fr|x64.ActiveCfg = STCF|x64
+		{D0E7156F-14A8-4CC1-BB5A-D9394F346BF9}.release_fr|x64.Build.0 = STCF|x64
+		{9955AC03-6181-4015-BF99-DD9E2A4F0F46}.debug_en|x64.ActiveCfg = debug_en|x64
+		{9955AC03-6181-4015-BF99-DD9E2A4F0F46}.debug_en|x64.Build.0 = debug_en|x64
+		{9955AC03-6181-4015-BF99-DD9E2A4F0F46}.release_en|x64.ActiveCfg = release_en|x64
+		{9955AC03-6181-4015-BF99-DD9E2A4F0F46}.release_en|x64.Build.0 = release_en|x64
+		{9955AC03-6181-4015-BF99-DD9E2A4F0F46}.release_fr|x64.ActiveCfg = release_fr|x64
+		{9955AC03-6181-4015-BF99-DD9E2A4F0F46}.release_fr|x64.Build.0 = release_fr|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B255EC70-E71B-4B8A-9B61-3208051608FE} = {F9E0716F-E789-421E-A7D4-3B33E80303B1}
+		{3633852A-8E94-40C3-8274-9F8E90622C3A} = {1953BF7E-FA12-4AF4-867B-545D8922A38F}
+		{D0E7156F-14A8-4CC1-BB5A-D9394F346BF9} = {1953BF7E-FA12-4AF4-867B-545D8922A38F}
+		{9955AC03-6181-4015-BF99-DD9E2A4F0F46} = {1953BF7E-FA12-4AF4-867B-545D8922A38F}
+		{213B0311-B55B-45C5-99E3-18CE386178E1} = {F9E0716F-E789-421E-A7D4-3B33E80303B1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {48832F83-BED3-4C8C-A91B-5443E627B14C}
+	EndGlobalSection
+EndGlobal

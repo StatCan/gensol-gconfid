@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <grm_compile_arg1>sensitiv</grm_compile_arg1>
+    <grm_compile_arg2>sensitig</grm_compile_arg2>
+    <proc_name_5c>sensi</proc_name_5c>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildMacro Include="grm_compile_arg1">
+      <Value>$(grm_compile_arg1)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="grm_compile_arg2">
+      <Value>$(grm_compile_arg2)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="proc_name_5c">
+      <Value>$(proc_name_5c)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

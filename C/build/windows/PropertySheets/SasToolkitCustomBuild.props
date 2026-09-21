@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <VS_CL6464_PATH>$(VC_ExecutablePath_x64_x64)</VS_CL6464_PATH>
+    <VS_CL6486_PATH>$(VC_ExecutablePath_x64_x86)</VS_CL6486_PATH>
+    <VS_CONFIG_NAME>$(Configuration)</VS_CONFIG_NAME>
+    <target_bit>$(PlatformArchitecture)</target_bit>
+    <VS_PLATFORM_NAME>$(Platform)</VS_PLATFORM_NAME>
+    <GrammarCompile_bat>$(SolutionDir)libraries\_vendored\SAS\compile\windows\CrossCompileSasProcGrammar.bat</GrammarCompile_bat>
+    <SAS_BUILD_DIR>$(SolutionDir)libraries\_vendored\SAS</SAS_BUILD_DIR>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SRC_DIR_SASUtilities);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="VS_CL6464_PATH">
+      <Value>$(VS_CL6464_PATH)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="VS_CL6486_PATH">
+      <Value>$(VS_CL6486_PATH)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="VS_CONFIG_NAME">
+      <Value>$(VS_CONFIG_NAME)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="target_bit">
+      <Value>$(target_bit)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="VS_PLATFORM_NAME">
+      <Value>$(VS_PLATFORM_NAME)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="GrammarCompile_bat">
+      <Value>$(GrammarCompile_bat)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="SAS_BUILD_DIR">
+      <Value>$(SAS_BUILD_DIR)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

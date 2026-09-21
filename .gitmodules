@@ -1,0 +1,6 @@
+[submodule "C/libraries/_submodules/jansson"]
+	path = C/libraries/_submodules/jansson
+	url = https://github.com/akheron/jansson.git
+[submodule "C/libraries/_submodules/arrow-nanoarrow"]
+	path = C/libraries/_submodules/arrow-nanoarrow
+	url = https://github.com/apache/arrow-nanoarrow.git
