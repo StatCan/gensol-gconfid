@@ -1,0 +1,1 @@
+Read PropertiesSummary.xlsx for a short description of each property sheet and a matrix of associations with the 20 Banff configurations

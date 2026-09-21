@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Libraries\GConfidAPI;$(SolutionDir)procedures\GConfidHeaderFiles;$(SRC_DIR_CommonAPI);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;SI_SYSTEMNAME="G-Confid";SI_SYSTEMVERSION="$(GConfidVersion)";SI_PROCVERSION="$(ProcVersion)";SI_EMAIL="G-Confid@statcan.gc.ca";_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_$(STC_Lang_2c);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+</Project>

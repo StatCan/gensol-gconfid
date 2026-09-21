@@ -1,0 +1,179 @@
+[build-system]
+# PEP 518 recommends both setuptools and wheel be required
+requires = ["setuptools>=70.00", "wheel", "pip>=26.1.2"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "gconfid"
+version = "2.0.2"
+maintainers = [
+    {name = "G-Confid Support, Statistics Canada", email = "statcan.gconfid-gconfid.statcan@statcan.gc.ca"}
+]
+authors = [
+  { name="Andrew Dombowsky", email="andrew.dombowsky@statcan.gc.ca" },
+]
+description = "G-Confid, Disclosure Avoidance Software from Statistics Canada."
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+]
+
+###Dependencies explained
+##PANDAS
+# SAS support fails below 2.0.0
+# below 2.2 has issues with PyArrow conversions in newer PyArrow versions
+##PYARROW
+# things fail below 14.0.0
+# 19.0.0 has issues with string dtypes in relation to pandas, patched in 19.0.1
+##NANOARROW
+# this library in early development, adjust for each release
+##DUCKDB
+# Things fail below 0.7.0
+##PANDERA
+# refactors how Pandas symbols are referenced, good min version
+##HIGHSPY
+# Required for using HiGHS solver in Pulp, faster solves than
+# built-in defaults, 1.13.0 latest release at time of adding
+dependencies = [
+  "pandas[parquet]>=2.2.0,<4",
+  "pulp>=2.9.0,<4",
+  "pyarrow>=14,!=19.0.0",
+  "nanoarrow>=0.5.0,<0.9",
+  "duckdb>=0.7.0,<2",
+  "pandera>=0.24.0",
+  "highspy>=1.13.0",
+]
+[project.optional-dependencies]
+test = [
+  "pytest!=9.1.*",
+  "pytest-cov",
+]
+performance = ["pandas[performance]"]
+diagnostics = ["psutil"]
+dev = [
+  "gconfid[test]", 
+  "ruff",
+]
+
+[tool.pytest.ini_options]
+# look in tests/run_pytest.[sh,cmd] for what markers to select
+addopts = '-v -m "m_auto_pass and not m_known_to_fail" --cache-clear -rf --cov=gconfid --cov-report=term --cov-report=html --cov-report=xml'
+console_output_style = "count"
+testpaths = ["tests"]
+markers = [ # keep markers in sync with `Python/tests/pytest.ini`
+  "m_auto_pass: tests which should always pass and run quickly (ideal for automated tests)",
+  "m_known_to_fail: tests to skip",
+  "m_needs_update: test case that needs to be updated",
+  "m_fails_missing_vs_blank: tests that fail because control uses missing (<NA>) while test uses blank ('')",
+  "m_internal_build_only: tests that are only expected or able to pass on the internal build",
+  "m_external_build_only: tests that are only expected or able to pass on the external build",
+]
+
+# `tools.coverage` configures `pytest-cov` plugin (package)
+[tool.coverage.run]
+# for `omit` use prefix '*/gconfid' so it works for installed packages and editable installs
+omit = [
+  "*/gconfid/testing/*",
+  "*/gconfid/_common/src/testing/*",
+]
+
+[tool.coverage.xml]
+# to be used as gitlab artifact, "cobertura" format
+output = "gitlab-coverage.xml"
+
+[tool.ruff]
+output-format = "concise"
+include = ["pyproject.toml", "src/**/*.py", "scripts/**/*.py"]
+exclude = [
+  "scripts/process_sast_output.py",  # used for development purposes only
+]
+line-length = 160
+
+# See https://docs.astral.sh/ruff/rules/ for documentation on rules and rule sets
+lint.select = [
+  # Basic rules
+  "ALL",
+  "E",  # Errors in pycodestyle
+  "F",  # Pyflakes 
+  "UP", # Pyupgrade
+
+  # These are rules recommended by cyber security
+  # See the following for more details: https://confluenceb.statcan.ca/display/ITS/Python_Ruff_Security_SCA_Rules
+  "S", 
+  "BLE",
+  "B",
+  "T10", 
+  "EM",
+  "LOG", 
+  "G", 
+  "PYI",
+  "PTH", 
+  "SLF", 
+  "PTH",
+  "ERA",
+  "PGH",
+]
+
+# Ignored rules should be associated with a comment indicating why is it being ignored 
+lint.ignore = [
+  "FBT",
+  "PD008",
+  "PD901",
+  "SIM115",
+  "SIM108",
+  "SIM118",
+  "RET504",
+  "PLR0913",
+  "RUF100",  # doesn't work as expected
+  "RUF005",
+  "RUF010",
+  "RUF012",
+  "ANN",  # disable if adding annotations
+  "UP038",    # rule looks bad, others agree: https://github.com/astral-sh/ruff/issues/7871
+  "UP015",    # bad rule
+#  "E402",    # PEP8 recommendation, should follow
+#  "F401",     # To be reviewed - Library imported but not used
+#  "SLF001",   # Don't ignore, ignore specific files instead with `[tool.ruff.lint.per-file-ignores]`
+#  "S608",     # don't ignore: https://duckdb.org/docs/sql/query_syntax/prepared_statements.html
+#  "PTH118",   # On the fence about this one
+#  "PTH120",   # On the fence about this one
+]
+
+# exceptions to rule SLF001
+lint.flake8-self.extend-ignore-names = [
+  ###  allow accessing internally defined private class members ###
+  "_enabled_global",
+  "_load_c",
+  "_reload_c",
+  "_unload_c",
+  "_outconstraint",
+  "_outcell",
+  "_outlargest",
+  "_outpairs",
+  "_outtargets",
+  "_outsuppress",
+  "_outaudit",
+  "_outround",
+]
+
+[tool.ruff.lint.per-file-ignores]
+  "src/gconfid/**/testing/**/*.py" = [
+    "S101",  # using `assert` allowed in `gconfid.testing` subpackage
+    "UP032",  # we use `.format` since it's easier to add NLS support later
+    "C",
+    "T201",
+    "PLR",
+    "PLW",
+    "PD",
+    "N",
+    "D",
+  ]
+  "src/gconfid/_common/**/*.py" = [
+    "TID252",
+    "D1",  # this code generally considered non-public
+  ]
+  "src/gconfid/**/io_util/**/*.py" = [
+    "N802",  # many violations here, uncomment this if addressing them
+  ]

@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='STCEM5|x64'">
+    <LocalDebuggerCommand>C:\program files\sashome\sasfoundation\9.4\sas.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>-PATH $(OutDir)</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugM5|x64'">
+    <LocalDebuggerCommand>C:\program files\sashome\sasfoundation\9.4\sas.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>-PATH $(OutDir)</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LocalDebuggerCommand>C:\program files\sashome\sasfoundation\9.4\sas.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>-PATH $(OutDir)</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugM5|Win32'">
+    <LocalDebuggerCommand>C:\program files\sashome\sasfoundation\9.4\sas.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>-PATH $(OutDir)</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXTE|Win32'">
+    <LocalDebuggerCommand>C:\program files\sashome\sasfoundation\9.4\sas.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>-PATH $(OutDir)</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXTEM5|Win32'">
+    <LocalDebuggerCommand>C:\program files\sashome\sasfoundation\9.4\sas.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>-PATH $(OutDir)</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXTF|Win32'">
+    <LocalDebuggerCommand>C:\program files\sashome\sasfoundation\9.4\sas.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>-PATH $(OutDir)</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXTFM5|Win32'">
+    <LocalDebuggerCommand>C:\program files\sashome\sasfoundation\9.4\sas.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>-PATH $(OutDir)</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='STCE|Win32'">
+    <LocalDebuggerCommand>C:\program files\sashome\sasfoundation\9.4\sas.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>-PATH $(OutDir)</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='STCEM5|Win32'">
+    <LocalDebuggerCommand>C:\program files\sashome\sasfoundation\9.4\sas.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>-PATH $(OutDir)</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='STCF|Win32'">
+    <LocalDebuggerCommand>C:\program files\sashome\sasfoundation\9.4\sas.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>-PATH $(OutDir)</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='STCFM5|Win32'">
+    <LocalDebuggerCommand>C:\program files\sashome\sasfoundation\9.4\sas.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>-PATH $(OutDir)</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LocalDebuggerCommand>C:\program files\sashome\sasfoundation\9.4\sas.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>-PATH $(OutDir)</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXTE|x64'">
+    <LocalDebuggerCommand>C:\program files\sashome\sasfoundation\9.4\sas.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>-PATH $(OutDir)</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXTEM5|x64'">
+    <LocalDebuggerCommand>C:\program files\sashome\sasfoundation\9.4\sas.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>-PATH $(OutDir)</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXTF|x64'">
+    <LocalDebuggerCommand>C:\program files\sashome\sasfoundation\9.4\sas.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>-PATH $(OutDir)</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXTFM5|x64'">
+    <LocalDebuggerCommand>C:\program files\sashome\sasfoundation\9.4\sas.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>-PATH $(OutDir)</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='STCE|x64'">
+    <LocalDebuggerCommand>C:\program files\sashome\sasfoundation\9.4\sas.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>-PATH $(OutDir)</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='STCF|x64'">
+    <LocalDebuggerCommand>C:\program files\sashome\sasfoundation\9.4\sas.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>-PATH $(OutDir)</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='STCFM5|x64'">
+    <LocalDebuggerCommand>C:\program files\sashome\sasfoundation\9.4\sas.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>-PATH $(OutDir)</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+</Project>

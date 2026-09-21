@@ -1,0 +1,104 @@
+# this file defines absolute paths and metadata required for builds
+# It uses `realpath` and the relative path from the "current directory"
+# to this file. As this files relative location to other Makefiles is 
+# known, giving the relative path from any directory to this files 
+# location allows resolution of the below-defined paths to occur
+#
+# To access the variables defined here in your makefile
+# 1- define `REL_ROOT=<relative-path-to-this-dir>`
+# 2- `include $(REL_ROOT)MakeDirPaths`
+# Flag variable `INIT_DIR_PATH` indicates that this file has already ran
+
+##### DETERMINE REPO ROOT #####################################################
+ifeq ($(REL_ROOT),)
+REL_ROOT=.
+endif
+
+# `realpath` turns relative path into absolute path to GIT repo's root
+# must manually add `/` at end
+DIR_REPO_ROOT      = $(realpath $(REL_ROOT)/../../)/
+
+
+##### BUILD METADATA ##########################################################
+export GCONFID_VERSION_SYSTEM  = 2.0.2
+export GCONFID_VERSION_PROC    = $(GCONFID_VERSION_SYSTEM)
+
+
+##### internal variables, used to build exported variables ####################
+DIR_C_ROOT                             = $(DIR_REPO_ROOT)C/
+
+DIR_C_PROCEDURES                       = $(DIR_C_ROOT)procedures/
+
+DIR_GCONFID_LIBRARIES                    = $(DIR_C_ROOT)libraries/
+DIR_GCONFID_LIBRARIES_SUBMODULES         = $(DIR_GCONFID_LIBRARIES)_submodules/
+DIR_GCONFID_LIBRARIES_VENDORED           = $(DIR_GCONFID_LIBRARIES)_vendored/
+DIR_STC_C_LIBRARIES                    = $(DIR_GCONFID_LIBRARIES_SUBMODULES)STC_C_Libraries/
+
+##### C MAKEFILE PATHS ########################################################
+export DIR_C_MAKEFILE        = $(DIR_C_ROOT)build/unix-like/
+export DIR_C_MAKE_INCLUDE    = $(DIR_C_MAKEFILE)make_include/
+
+##### C LIBRARY PATHS #########################################################
+export DIR_GCONFIDAPI          = $(DIR_GCONFID_LIBRARIES)GConfidAPI/
+export DIR_GCONFIDAPI_SRC      = $(DIR_GCONFIDAPI)
+
+export DIR_COMMONAPI         = $(DIR_GCONFID_LIBRARIES)CommonAPI/
+export DIR_COMMONAPI_SRC     = $(DIR_STC_C_LIBRARIES)CommonAPI/
+
+export DIR_IOUTIL          = $(DIR_GCONFID_LIBRARIES)IOUtilities/
+export DIR_IOUTIL_SRC      = $(DIR_STC_C_LIBRARIES)IOUtilities/
+
+export DIR_JANSSON           = $(DIR_GCONFID_LIBRARIES)jansson/
+export DIR_JANSSON_SRC       = $(DIR_GCONFID_LIBRARIES_SUBMODULES)jansson/
+
+export DIR_ARROW             = $(DIR_GCONFID_LIBRARIES)arrow/
+export DIR_ARROW_SRC         = $(DIR_GCONFID_LIBRARIES_SUBMODULES)arrow-nanoarrow/
+
+
+##### C PROCEDURE PATHS #######################################################
+export DIR_SENSITIV          = $(DIR_C_PROCEDURES)sensitivity/
+
+
+##### PYTHON PACKAGE PATHS ####################################################
+export DIR_PYTHON_ROOT       = $(DIR_REPO_ROOT)Python/
+export DIR_PYTHON_PKG        = $(DIR_PYTHON_ROOT)
+export DIR_PYTHON_BIN        = $(DIR_PYTHON_PKG)src/gconfid/proc/bin/linux/x64/
+
+
+##### TEST SCRIPT PATHS #######################################################
+export DIR_TEST_ROOT         = $(DIR_PYTHON_PKG)tests/
+export DIR_TEST_LOW_LEVEL    = $(DIR_TEST_ROOT)low_level/
+export DIR_TEST_REGRESSION   = $(DIR_TEST_ROOT)regression_tests/
+
+# flag that this file has been executed
+export INIT_DIR_PATH = COMPLETE
+
+# uncomment the following to print the variables to the console when running
+$(info MakeDirPaths defined the following)
+$(info DIR_REPO_ROOT                   = $(DIR_REPO_ROOT))
+$(info GCONFID_VERSION_SYSTEM            = $(GCONFID_VERSION_SYSTEM))
+$(info GCONFID_VERSION_PROC              = $(GCONFID_VERSION_PROC))
+$(info DIR_C_ROOT                      = $(DIR_C_ROOT))
+$(info DIR_C_PROCEDURES                = $(DIR_C_PROCEDURES))
+$(info DIR_GCONFID_LIBRARIES             = $(DIR_GCONFID_LIBRARIES))
+$(info DIR_GCONFID_LIBRARIES_SUBMODULES  = $(DIR_GCONFID_LIBRARIES_SUBMODULES))
+$(info DIR_GCONFID_LIBRARIES_VENDORED    = $(DIR_GCONFID_LIBRARIES_VENDORED))
+$(info DIR_STC_C_LIBRARIES             = $(DIR_STC_C_LIBRARIES))
+$(info DIR_C_MAKEFILE                  = $(DIR_C_MAKEFILE))
+$(info DIR_C_MAKE_INCLUDE              = $(DIR_C_MAKE_INCLUDE))
+$(info DIR_GCONFIDAPI                    = $(DIR_GCONFIDAPI))
+$(info DIR_GCONFIDAPI_SRC                = $(DIR_GCONFIDAPI_SRC))
+$(info DIR_COMMONAPI                   = $(DIR_COMMONAPI))
+$(info DIR_COMMONAPI_SRC               = $(DIR_COMMONAPI_SRC))
+$(info DIR_IOUTIL                    = $(DIR_IOUTIL))
+$(info DIR_IOUTIL_SRC                = $(DIR_IOUTIL_SRC))
+$(info DIR_JANSSON                     = $(DIR_JANSSON))
+$(info DIR_JANSSON_SRC                 = $(DIR_JANSSON_SRC))
+$(info DIR_ARROW                       = $(DIR_ARROW))
+$(info DIR_ARROW_SRC                   = $(DIR_ARROW_SRC))
+$(info DIR_SENSITIV                    = $(DIR_SENSITIV))
+$(info DIR_PYTHON_ROOT                 = $(DIR_PYTHON_ROOT))
+$(info DIR_PYTHON_PKG                  = $(DIR_PYTHON_PKG))
+$(info DIR_PYTHON_BIN                  = $(DIR_PYTHON_BIN))
+$(info DIR_TEST_LOW_LEVEL              = $(DIR_TEST_LOW_LEVEL))
+$(info INIT_DIR_PATH                   = $(INIT_DIR_PATH))

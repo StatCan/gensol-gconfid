@@ -1,0 +1,3 @@
+# allow .user file to be included.  It aids the dev. in setting the debugging settings
+
+!*.vcxproj.user

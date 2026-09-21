@@ -1,0 +1,32 @@
+{
+    "python.testing.pytestArgs": [
+        "Python/tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "[markdown]": {
+        "files.encoding": "utf8"
+    },
+    "[cpp]": {
+        "files.autoGuessEncoding": true
+    },
+    "cSpell.ignoreWords": [
+        "gconfid",
+        "g-confid",
+        "G-Confid",
+        "methodologists",
+        "Methodologists",
+        "incell",
+        "inconstraint",
+        "ROUNDEDSIZE",
+        "roundingbase",
+        "outaudit",
+        "outsuppress",
+        "outcell",
+        "outpairs",
+        "outlargest",
+        "outtargets",
+        "outconstraint",
+        "outround",
+    ],
+}
