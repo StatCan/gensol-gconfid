@@ -1,5 +1,9 @@
 # Notes de mise à jour de G-Confid
 
+## 2026-Septembre-24 (Version `2.0.3`)
+
+* Suppress: Correction d'un problème pouvant survenir lors de l'utilisation d'une variable BY, provoquant une erreur lors de la combinaison des résultats du groupe BY précédent
+
 ## 2026-Septembre-21 (Version `2.0.2`)
 
 * Mettre à jour la version du sous-module jansonn à la version 2.15.0

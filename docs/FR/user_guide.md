@@ -2,7 +2,9 @@
 
 G-Confid est un système généralisé de Statistique Canada qui offre une méthodologie conçue pour empêcher la diffusion de données confidentielles. Il est composé de quatre modules; le module de Sensibilité (`Sensitivity`) est utilisé pour déterminer le caractère délicat des cellules de tableau (et des combinaisons de cellules). Le module de `Suppression` sert à établir un modèle de suppression, c’est-à-dire un ensemble de cellules complémentaires, nécessaires pour protéger les cellules sensibles (ou les combinaisons de cellules). La troisième composante, le module d’Audit (`Auditing`), sert à vérifier la validité d’un schéma de suppression. En plus de ces trois modules, le module d’Arrondissement optimisé (`OptimizedRounding`) fournit un arrondissement à la fois contrôlé et additif.
 
-Ce projet contient la version Python de G-Confid adaptée à partir de la version SAS existante. G-Confid est mis à l’essai avec les versions 3.10, 3.11, 3.12 et 3.13 de Python.
+Ce projet contient la version Python de G-Confid adaptée à partir de la version SAS existante. G-Confid est mis à l’essai avec les versions 3.11, 3.12, 3.13 et 3.14* de Python.
+
+> ***Remarque:** Si vous utilisez Python 3.14 et que l'installation avec `pip` échoue en raison de la dépendance `nanoarrow`, nous vous recommandons d'utiliser plutôt Python 3.13 ou d'employer un environnement [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html) en attendant que des roues (`.whl`) PyPI compatibles soient disponibles. [Pour plus de renseignements.](#installation-de-python-314-et-de-nanoarrow)
 
 ## Table des matières
 
@@ -42,6 +44,7 @@ Ce projet contient la version Python de G-Confid adaptée à partir de la versio
         -   [Utilisation des fichiers SAS en Python](#utilisation-des-fichiers-sas-en-python)
         -   [Considérations relatives au rendement](#considérations-relatives-au-rendement)
         -   [Multitraitement](#multitraitement)
+        -   [Installation de Python 3.14 et de `nanoarrow`](#installation-de-python-314-et-de-nanoarrow)
 
 ## Sensibilité
 
@@ -202,7 +205,7 @@ Ce module indique les cellules à supprimer dans un tableau, en plus des cellule
 | trace               |Booléen ou int | Voir [l’option trace](#niveau-de-verbosité-du-journal-python-trace) |
 | capture             |Booléen | Voir [Suppression et dépannage des messages du journal](#suppression-et-dépannage-des-messages-de-journal-capture) |
 | logger              |Booléen | Voir [Utilisation de votre propre enregistreur](#utilisation-de-votre-propre-enregistreur-logger) |
-<!-- |multiprocess|bool|Enables the use of multiple processors to distribute the work of the solver. Defaults to False. See [Multiprocessing](user_guide.md#Multiprocessing). *NOTE: May be unstable. Does not work with any custom_solver that logs to disk*| -->
+<!-- |multiprocess|bool|Enables the use of multiple processors to distribute the work of the solver. Defaults to False. See [Multiprocessing](user_guide.md#Multiprocessing). *Remarque: May be unstable. Does not work with any custom_solver that logs to disk*| -->
 
 #### **Cost Functions**
 
@@ -309,7 +312,7 @@ Vérifie la validité d’un schéma de suppression. En pratique, l’audit devr
 | report_level | int                           | Détermine si un rapport est généré à la fin du traitement. Indiquer 1 pour générer le rapport, 0 pour ne pas en générer. Facultatif, valeur par défaut = 0. |
 | by           | str                           | Liste de noms de variables séparés par des espaces, utilisés pour créer par groupes By.                                                                     |
 | custom_solver| pulp.LpSolver|Solveur PuLP personnalisé optionnel à utiliser à la place du solveur par défaut. |
-|multiprocess|Booléen|Active le multiprocessing pour paralléliser l’exécution du solveur. Valeur par défaut = False. See [Multiprocessing](user_guide.md#multiprocessing). *NOTE: Peut être instable. Ne fonctionne pas avec un custom_solver qui écrit des logs sur disque. *|
+|multiprocess|Booléen|Active le multiprocessing pour paralléliser l’exécution du solveur. Valeur par défaut = False. See [Multiprocessing](user_guide.md#multiprocessing). *REMARQUE: Peut être instable. Ne fonctionne pas avec un custom_solver qui écrit des logs sur disque. *|
 |skip_validation|Booléen|Disables the pre-process validation of expected fields on your input tables. Valeur par défaut = False.|
 | trace               |Booléen ou int | Voir [l’option trace](#niveau-de-verbosité-du-journal-python-trace) |
 | capture             |Booléen | Voir [Suppression et dépannage des messages du journal](#suppression-et-dépannage-des-messages-de-journal-capture) |
@@ -357,7 +360,7 @@ Ce module est utilisé pour arrondir des tableaux multidimensionnels. À partir 
 | additive_bound | [Ensemble de données d’entrée](#spécification-des-tableaux-dentrée-et-de-sortie)||
 | outround       | [Ensemble de données de sortie](#spécification-des-tableaux-dentrée-et-de-sortie)||
 | base           | int                           | Base d’arrondissement à utiliser.                     |
-|multiprocess|Booléen|Active le multiprocessing pour paralléliser l’exécution du solveur. Valeur par défaut = False. See [Multiprocessing](user_guide.md#multiprocessing). *NOTE: Peut être instable. Ne fonctionne pas avec un custom_solver qui écrit des logs sur disque. *|
+|multiprocess|Booléen|Active le multiprocessing pour paralléliser l’exécution du solveur. Valeur par défaut = False. See [Multiprocessing](user_guide.md#multiprocessing). *REMARQUE: Peut être instable. Ne fonctionne pas avec un custom_solver qui écrit des logs sur disque. *|
 |skip_validation|Booléen|Disables the pre-process validation of expected fields on your input tables. Valeur par défaut = False.|
 | trace               |Booléen ou int | Voir [l’option trace](#niveau-de-verbosité-du-journal-python-trace) |
 | capture             |Booléen | Voir [Suppression et dépannage des messages du journal](#suppression-et-dépannage-des-messages-de-journal-capture) |
@@ -760,7 +763,7 @@ L’utilisation du format d’ensemble de données SAS pour de grands ensembles 
 
 #### Multitraitement
 
-Pour le moment, Audit est la seule procédure offrant une option `multiprocessing`. Cette option est définie à `False` par défaut. Si ce paramètre est réglé sur `True`, G‑Confid tentera d’utiliser les processeurs logiques qui lui sont disponibles (`multiprocessing.cpu_count() - 1`) afin de paralléliser la résolution des problèmes de Programmation Linéaire nécessaires à son fonctionnement. L’utilisation de cette option sur les systèmes Linux (comme la Zone) ne devrait nécessiter aucune modification supplémentaire de vos scripts existants, mis à part définir le nouveau paramètre `multiprocess` à`True`. Pour utiliser cette fonctionnalité sur les machines **Windows**, en plus de l’activation du paramètre, votre script appelant G‑Confid doit être légèrement modifié en ajoutant ce que l’on appelle un guard à la fin du fichier, comme illustré ici :
+Pour le moment, Audit est la seule procédure offrant une option `multiprocessing`. Cette option est définie à `False` par défaut. Si ce paramètre est réglé sur `True`, G‑Confid tentera d’utiliser les processeurs logiques qui lui sont disponibles (`multiprocessing.cpu_count() - 1`) afin de paralléliser la résolution des problèmes de Programmation Linéaire nécessaires à son fonctionnement. L’utilisation de cette option sur les systèmes Linux (comme la Zone) ne devrait nécessiter aucune modification supplémentaire de vos scripts existants, mis à part définir le nouveau paramètre `multiprocess` à`True`. Pour utiliser cette fonctionnalité sur les systèmes **Windows**, en plus de l’activation du paramètre, votre script appelant G‑Confid doit être légèrement modifié en ajoutant ce que l’on appelle un guard à la fin du fichier, comme illustré ici :
 
 <table>
 <tr>
@@ -805,3 +808,52 @@ if __name__=="__main__":
 </td>
 </tr>
 </table>
+
+#### Installation de Python 3.14 et de `nanoarrow`
+
+`gconfid` dépend actuellement de:
+
+```text
+nanoarrow>=0.5.0,<0.9
+```
+
+Au moment d'écrire ces lignes, le Python Package Index (PyPI) ne fournit pas de roues (`.whl`) précompilées de `nanoarrow` dans cette plage de versions qui soient compatibles avec Python 3.14. Par conséquent, l'installation de `gconfid` avec `pip` sur Python 3.14 peut échouer lorsque `pip` tente d'installer `nanoarrow`. Les versions futures de `gconfid` pourraient dépendre de versions plus récentes de `nanoarrow`, telles que la version 0.9.0, ce qui rendrait les solutions ci-dessous superflues.
+
+Généralement, vous pourriez voir des erreurs indiquant qu'aucune distribution compatible n'a pu être trouvée pour `nanoarrow`, ou que `nanoarrow` doit être compilé à partir du code source. Cela peut aussi se manifester par des erreurs lors de l'importation de `gconfid`, ou par l'impossibilité de trouver divers modules. De plus, même si `gconfid` semble s'installer, l'exécution de `pip list` peut afficher la version 0.0.0.
+
+##### Pourquoi cela se produit
+
+Les paquets Python qui contiennent des composants compilés doivent publier des binaires (`.whl`) pour chaque version de Python et chaque plateforme prise en charge. Bien que les versions de `nanoarrow` comprises dans la plage requise par `gconfid` soient disponibles sur PyPI, des compilations de roues compatibles avec Python 3.14 pourraient ne pas être disponibles.
+
+L'écosystème `conda-forge` propose toutefois des versions de `nanoarrow` pour Python 3.14, de sorte que les utilisateurs qui effectuent l'installation par l'intermédiaire de Conda ne rencontrent généralement pas ce problème.
+
+##### Solutions recommandées
+
+###### Option 1: Utiliser Python 3.13 ou une version antérieure
+
+La solution la plus simple consiste à installer et à utiliser une version prise en charge de Python pour laquelle des roues `nanoarrow` compatibles sont disponibles.
+
+Par exemple, avec Python 3.13 installé:
+
+```bash
+python -3.13 -m venv my_venv
+.\my_venv\bin\activate
+
+pip install gconfid
+```
+
+C'est l'approche recommandée pour les utilisateurs qui n'ont pas expressément besoin de Python 3.14.
+
+###### Option 2: Utiliser Conda / Conda-Forge
+
+Si Python 3.14 est requis, installez `nanoarrow` depuis `conda-forge`, puis installez `gconfid`.
+
+Exemple:
+
+```bash
+conda create -n gconfid python=3.14
+conda activate gconfid
+
+conda install -c conda-forge nanoarrow
+pip install gconfid
+```

@@ -2,7 +2,9 @@
 
 G-Confid is a Statistics Canada generalized system that offers a methodology designed to prevent the release of confidential data. It is comprised of four modules, The `Sensitivity` module is used to determine the sensitivity of table cells (and combinations of cells). The `Suppression` module is used to determine a suppression pattern, or set of complementary cells, necessary to protect the sensitive cells (or combinations of cells). The third component, the `Auditing` module, is used to verify the validity of a suppression pattern. In addition to these three modules, the `OptimizedRounding` module provides rounding which is both controlled and additive. 
 
-This project contains the Python version of G-Confid that has been adapted from the exisiting SAS version. G-Confid is tested under Python versions 3.10, 3.11, 3.12 and 3.13.
+This project contains the Python version of G-Confid that has been adapted from the exisiting SAS version. G-Confid is tested under Python versions 3.11, 3.12, 3.13 and 3.14*.
+
+> ***Note:** If you are using Python 3.14 and `pip` installation fails due to the `nanoarrow` dependency, we recommend either installing with Python 3.13 or using a [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html) environment until compatible PyPI wheels become available. [For more information.](#python-314-and-nanoarrow-installation)
 
 ## Table of contents
 
@@ -41,6 +43,7 @@ This project contains the Python version of G-Confid that has been adapted from 
     - [Working with SAS Files in Python](#working-with-sas-files-in-python)
     - [Performance Considerations](#performance-considerations)
     - [Multiprocessing](#multiprocessing)
+    - [Python 3.14 and `nanoarrow` Installation](#python-314-and-nanoarrow-installation)
 
 ## Sensitivity
 
@@ -762,7 +765,7 @@ Using the SAS dataset format for large input datasets may result in degraded per
 
 #### Multiprocessing
 
-At the moment, Audit is the only procedure offering a `multiprocessing` option. It is `False` by default. If this parameter is set to `True`, G-Confid will attempt to use the logical processors available to it (`multiprocessing.cpu_count() - 1`) to parallelize the work of solving the Linear Programming problems it needs to solve. Using this option on Linux systems (such as the Zone) should not require any additional modifications to your existing scripts other than setting the new `multiprocess` parameter to `True`. To use this feature on **Windows** machines, other than the parameter setting, your script that you use to call G-Confid needs to be modified slightly by adding what's called a "guard" to the end of your file, as seen here:
+At the moment, Audit is the only procedure offering a `multiprocessing` option. It is `False` by default. If this parameter is set to `True`, G-Confid will attempt to use the logical processors available to it (`multiprocessing.cpu_count() - 1`) to parallelize the work of solving the Linear Programming problems it needs to solve. Using this option on Linux systems (such as the Zone) should not require any additional modifications to your existing scripts other than setting the new `multiprocess` parameter to `True`. To use this feature on **Windows** systems, other than the parameter setting, your script that you use to call G-Confid needs to be modified slightly by adding what's called a "guard" to the end of your file, as seen here:
 
 <table>
 <tr>
@@ -807,3 +810,52 @@ if __name__=="__main__":
 </td>
 </tr>
 </table>
+
+#### Python 3.14 and `nanoarrow` Installation
+
+`gconfid` currently depends on:
+
+```text
+nanoarrow>=0.5.0,<0.9
+```
+
+At the time of writing, the Python Package Index (PyPI) does not provide pre-built `nanoarrow` wheels within this version range that are compatible with Python 3.14. As a result, installing `gconfid` with `pip` on Python 3.14 may fail when `pip` attempts to install `nanoarrow`. Future releases of `gconfid` may be able to depend on newer releases of `nanoarrow` such as 0.9.0 which would leave the below solutions unecessary.
+
+Typically, you may see errors indicating that no compatible distribution could be found for `nanoarrow`, or that `nanoarrow` must be compiled from source. It may also manifest as errors when importing `gconfid`, or that various modules are not able to be found. As well, even though `gconfid` appears to install, when you run `pip list` it may show as having version 0.0.0.
+
+##### Why This Happens
+
+Python packages that contain compiled components must publish binaries (wheels or `.whl` files) for each supported Python version and platform. While `nanoarrow` releases within the version range required by `gconfid` are available on PyPI, compatible Python 3.14 wheel builds may not be available.
+
+The `conda-forge` ecosystem does provide Python 3.14 builds of `nanoarrow`, so users installing through Conda generally will not encounter this issue.
+
+##### Recommended Solutions
+
+###### Option 1: Use Python 3.13 or Earlier
+
+The simplest solution is to install and use a supported Python version for which compatible `nanoarrow` wheels are available.
+
+For example, with python 3.13 installed:
+
+```bash
+python -3.13 -m venv my_venv
+.\my_venv\bin\activate
+
+pip install gconfid
+```
+
+This is the recommended approach for users who do not specifically require Python 3.14.
+
+###### Option 2: Use Conda / Conda-Forge
+
+If Python 3.14 is required, install `nanoarrow` from `conda-forge` and then install `gconfid`.
+
+Example:
+
+```bash
+conda create -n gconfid python=3.14
+conda activate gconfid
+
+conda install -c conda-forge nanoarrow
+pip install gconfid
+```
