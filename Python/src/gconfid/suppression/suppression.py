@@ -84,8 +84,6 @@ class Suppression(_ConfidModule):
         :type ambiguity_tolerance: float, optional
         :param by: Variable names separated by spaces used to create processing groups, defaults to None
         :type by: str | None, optional
-        # :param multiprocess: Enables the use of multiple processors to distribute solver work, defaults to False
-        # :type multiprocess: bool, optional
         :param skip_validation: Should the validation of fields on the input files be skipped?, defaults to False
         :type skip_validation: bool, optional
         :param custom_solver: A custom configured solver to use instead of the default solver, defaults to None

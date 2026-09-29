@@ -1,5 +1,9 @@
 # G-Confid Release Notes
 
+## 2026-September-24 (Version `2.0.3`)
+
+* Suppress: fixed issue that can occur when using a by-variable causing an error when combining outputs from the previously executed by-group
+
 ## 2026-September-21 (Version `2.0.2`)
 
 * Update jansonn submodule version to 2.15.0

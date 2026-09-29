@@ -4,7 +4,7 @@ requires = ["setuptools>=70.00", "wheel", "pip>=26.1.2"]
 build-backend = "setuptools.build_meta"
 [project]
 name = "gconfid"
-version = "2.0.2"
+version = "2.0.3"
 maintainers = [
     {name = "G-Confid Support, Statistics Canada", email = "statcan.gconfid-gconfid.statcan@statcan.gc.ca"}
 ]
@@ -56,6 +56,10 @@ dev = [
   "gconfid[test]", 
   "ruff",
 ]
+
+[project.urls]
+"Homepage" = "https://github.com/StatCan/gensol-gconfid"
+"Bug Tracker" = "https://github.com/StatCan/gensol-gconfid/issues"
 
 [tool.pytest.ini_options]
 # look in tests/run_pytest.[sh,cmd] for what markers to select

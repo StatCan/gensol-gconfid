@@ -890,7 +890,7 @@ def form_outcell(incell: pa.Table, net_variation: dict, instatus: dict) -> pa.Ta
         names=["CellId", "NetVariation"],
     )
 
-    return status_tbl.join(netvariation_tbl, keys="CellId").join(incell, keys="CellId")
+    return incell.join(status_tbl, keys="CellId").join(netvariation_tbl, keys="CellId")
 
 def form_outcomplements(complements: list[tuple] | None) -> pa.Table | None:
     """Form the outcomplements dataset if data is given, else return None.
@@ -1324,7 +1324,7 @@ def _suppress(incell: pa.Table, inconstraint: pa.Table, outcomplement: bool = Fa
                 else:
                     out_tbl = pa.concat_tables([out_tbl, out_by])
 
-                if out_complement_by is not None:
+                if out_complement_by is not None and out_complement_by.num_rows > 0:
                     if out_complement.num_rows == 0 and out_complement.num_columns == 0:
                         out_complement = out_complement_by
                     else:

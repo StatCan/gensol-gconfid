@@ -21,6 +21,21 @@ def test_suppress_01():
         ],
     )
 
+@pytest.mark.m_auto_pass
+def test_suppress_double_by():
+    """Test the production of outputs with multiple by-groups is functioning."""
+    gconfid.testing.Suppression(
+        incell="incell_double_by.parq",
+        inconstraint="incon_double_by.parq",
+        cost_function2 = "information",
+        by="Test OtherTest",
+
+        expected_outsuppress="out_suppressed_double_by.parq",
+        # Test is not methodologically sound, just ensuring no errors during execution
+        drop_columns=["NetVariation"],
+        round_data=13,
+    )
+
 # invoke pytest if this file is executed directly
 if __name__ == "__main__":
     gconfid.testing.run_pytest()
