@@ -4,7 +4,7 @@ requires = ["setuptools>=70.00", "wheel", "pip>=26.1.2"]
 build-backend = "setuptools.build_meta"
 [project]
 name = "gconfid"
-version = "2.0.3"
+version = "2.0.4"
 maintainers = [
     {name = "G-Confid Support, Statistics Canada", email = "statcan.gconfid-gconfid.statcan@statcan.gc.ca"}
 ]
@@ -28,7 +28,7 @@ classifiers = [
 # things fail below 14.0.0
 # 19.0.0 has issues with string dtypes in relation to pandas, patched in 19.0.1
 ##NANOARROW
-# this library in early development, adjust for each release
+# this library in early development, adjust for each major release
 ##DUCKDB
 # Things fail below 0.7.0
 ##PANDERA
@@ -40,7 +40,7 @@ dependencies = [
   "pandas[parquet]>=2.2.0,<4",
   "pulp>=2.9.0,<4",
   "pyarrow>=14,!=19.0.0",
-  "nanoarrow>=0.5.0,<0.9",
+  "nanoarrow>=0.5.0,<1",
   "duckdb>=0.7.0,<2",
   "pandera>=0.24.0",
   "highspy>=1.13.0",

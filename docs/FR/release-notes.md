@@ -1,5 +1,11 @@
 # Notes de mise à jour de G-Confid
 
+## 2026-Octobre-02 (Version `2.0.4`)
+
+- Mise à jour des dépendances des paquets:
+  - Python: autoriser toutes les futures versions mineures de nanoarrow 0
+  - C: mettre à jour vers nanoarrow 0.9.0
+
 ## 2026-Septembre-24 (Version `2.0.3`)
 
 * Suppress: Correction d'un problème pouvant survenir lors de l'utilisation d'une variable BY, provoquant une erreur lors de la combinaison des résultats du groupe BY précédent

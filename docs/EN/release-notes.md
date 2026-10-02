@@ -1,5 +1,11 @@
 # G-Confid Release Notes
 
+## 2026-October-02 (Version `2.0.4`)
+
+- Update package dependencies:
+  - Python: allow all future minor releases of nanoarrow version 0
+  - C: update to nanoarrow 0.9.0
+
 ## 2026-September-24 (Version `2.0.3`)
 
 * Suppress: fixed issue that can occur when using a by-variable causing an error when combining outputs from the previously executed by-group
