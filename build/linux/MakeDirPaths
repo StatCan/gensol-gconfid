@@ -20,7 +20,7 @@ DIR_REPO_ROOT      = $(realpath $(REL_ROOT)/../../)/
 
 
 ##### BUILD METADATA ##########################################################
-export GCONFID_VERSION_SYSTEM  = 2.0.3
+export GCONFID_VERSION_SYSTEM  = 2.0.4
 export GCONFID_VERSION_PROC    = $(GCONFID_VERSION_SYSTEM)
 
 
